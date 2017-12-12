@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.altenapp.bo.GestionUsuariosBusinessObject;
+import com.altenapp.bo.modelo.UsuarioWeb;
 import com.altenapp.datos.jpa.Usuario_JPA_DAO;
 import com.altenapp.tablas.InfoUsuario;
 
@@ -23,17 +25,22 @@ import junit.framework.Assert;
 public class UsuarioServiceTest {
 	
 	@Autowired
-    private Usuario_JPA_DAO usuario_jpa_dao;
+    private GestionUsuariosBusinessObject businessObject;
+	
     private Logger logger = Logger.getLogger("myLog");
     private Long id;
     
     
-//    @Test
-//    public void listUsersTest() {
-//    	InfoUsuario resultado = usuario_jpa_dao.findinfoUsuarioByS("alberto");
-//        assertNotNull(resultado);
-//        assertEquals(4, resultado.getId());
-//    }
-//    
+    @Test
+   public void listUsersTest() {
+   	UsuarioWeb usuario = new UsuarioWeb();
+   	
+   	usuario.setUsuario("alberto");
+   	UsuarioWeb resultado = new UsuarioWeb();
+   	
+   	resultado = businessObject.validarUsuario(usuario);
+        assertEquals(resultado.getContrasena(), "1234");
+    }
+   
   
 }

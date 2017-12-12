@@ -1,5 +1,9 @@
 package com.altenapp.bo;
 
-public class GestionUsuariosBusinessObject {
+import com.altenapp.bo.modelo.UsuarioWeb;
+
+public interface GestionUsuariosBusinessObject {
+	
+	public UsuarioWeb validarUsuario(UsuarioWeb usuario);
 
 }
