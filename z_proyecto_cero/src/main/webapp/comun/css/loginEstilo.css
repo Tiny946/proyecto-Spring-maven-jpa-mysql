@@ -1,0 +1,57 @@
+body{
+	background-color: #F7F7F7;
+	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+	font-size: 13px;
+    font-weight: 400;
+    line-height: 1.471;
+    margin: 0;
+}
+
+.login{
+	position:fixed;
+	width:450px;
+	height:200px;
+	left:48%;
+	top:30%;
+	margin-left:-100px;
+	margin-top:-100px;
+	
+}
+
+img{
+	display:block;
+	margin-left: 50px;
+	
+}
+
+.username{
+	width: 280px;
+	height:27px;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0) 0 0 0px;
+ 	border-collapse: collapse;
+}
+
+.password{
+	width: 280px;
+	height:27px;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0) 0 0 0px;
+ 	border-collapse: collapse;
+}
+
+.boton{
+	width: 125px;
+	height:27px;
+	border-radius: 3px;
+	background-color: white;
+}
+
+a{
+	color: grey;
+	font-size: 12px;
+}
+
+a:hover{
+	color: red;
+}
