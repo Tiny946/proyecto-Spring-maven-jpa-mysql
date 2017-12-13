@@ -2,6 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 </head>
-<body onLoad="location.href='baseController.controller'">
+<body onLoad="location.href='home/index'">
 </body>
 </html>

@@ -9,23 +9,23 @@
 	
 
  	<!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="bootstrap/css/nprogress.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="bootstrap/css/green.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/green.css" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-    <link href="bootstrap/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="bootstrap/css/jqvmap.min.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/bootstrap/css/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="bootstrap/css/daterangepicker.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="bootstrap/css/custom.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/custom.min.css" rel="stylesheet">
     
     
 
@@ -45,17 +45,12 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="bootstrap/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>
-                
-                ${UsuarioWeb.infoUsuario.nombre }
-                
-                Nombre Apellido
-                
-                
+                <h2>                
+                ${nombre}
                 </h2>
               </div>
             </div>
@@ -101,7 +96,7 @@
             <div class="sidebar-footer hidden-small">
             
             <!-- FOTO LOGO ALTEN(RUTA) -->
-              <img src="bootstrap/images/alten3.png">
+              <img src="${pageContext.request.contextPath}/bootstrap/images/alten3.png">
               
               <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Opciones">
                 <span class="fa fa-cog" aria-hidden="true"></span>
@@ -112,7 +107,7 @@
               <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Bloquear">
                 <span class="fa fa-eye-slash" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="" href="index.html" data-original-title="Desconectarse">
+              <a data-toggle="tooltip" data-placement="top" title="" href="index" data-original-title="Desconectarse">
                 <span class="fa fa-sign-out" aria-hidden="true"></span>
               </a>
             </div>
@@ -131,7 +126,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="bootstrap/images/img.jpg" alt="">admin
+                    <img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="">${nombre}
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -150,7 +145,7 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><img src="bootstrap/images/img.jpg" alt="Profile Image"></span>
+                        <span class="image"><img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="Profile Image"></span>
                         <span>
                           <span>Juan Pérez</span>
                           <span class="time">3 mins ago</span>
@@ -162,7 +157,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="bootstrap/images/img.jpg" alt="Profile Image"></span>
+                        <span class="image"><img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="Profile Image"></span>
                         <span>
                           <span>Javier García</span>
                           <span class="time">hace 3 minutos</span>
@@ -174,7 +169,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="bootstrap/images/img.jpg" alt="Profile Image"></span>
+                        <span class="image"><img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="Profile Image"></span>
                         <span>
                           <span>José Martinez</span>
                           <span class="time">hace 5 minutos</span>
@@ -186,7 +181,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="bootstrap/images/img.jpg" alt="Profile Image"></span>
+                        <span class="image"><img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="Profile Image"></span>
                         <span>
                           <span>María Martín</span>
                           <span class="time">hace 8 minutos</span>
@@ -604,45 +599,45 @@
     
 
     <!-- jQuery -->
-    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="bootstrap/js/fastclick.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="bootstrap/js/nprogress.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="bootstrap/js/Chart.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/Chart.min.js"></script>
     <!-- gauge.js -->
-    <script src="bootstrap/js/gauge.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="bootstrap/js/bootstrap-progressbar.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="bootstrap/js/icheck.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/icheck.min.js"></script>
     <!-- Skycons -->
-    <script src="bootstrap/js/skycons.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/skycons.js"></script>
     <!-- Flot -->
-    <script src="bootstrap/js/jquery.flot.js"></script>
-    <script src="bootstrap/js/jquery.flot.pie.js"></script>
-    <script src="bootstrap/js/jquery.flot.time.js"></script>
-    <script src="bootstrap/js/jquery.flot.stack.js"></script>
-    <script src="bootstrap/js/jquery.flot.resize.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.pie.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.time.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.stack.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="bootstrap/js/jquery.flot.orderBars.js"></script>
-    <script src="bootstrap/js/jquery.flot.spline.min.js"></script>
-    <script src="bootstrap/js/curvedLines.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.orderBars.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.flot.spline.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="bootstrap/js/date.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/date.js"></script>
     <!-- JQVMap -->
-    <script src="bootstrap/js/jquery.vmap.js"></script>
-    <script src="bootstrap/js/jquery.vmap.world.js"></script>
-    <script src="bootstrap/js/jquery.vmap.sampledata.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.vmap.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.vmap.world.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.vmap.sampledata.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="bootstrap/js/moment.min.js"></script>
-    <script src="bootstrap/js/daterangepicker.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/moment.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="bootstrap/js/custom.min.js"></script>
+    <script src="${pageContext.request.contextPath}/bootstrap/js/custom.min.js"></script>
 	
 
   

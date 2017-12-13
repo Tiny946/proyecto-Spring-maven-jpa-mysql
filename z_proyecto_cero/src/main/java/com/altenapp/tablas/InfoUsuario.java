@@ -18,8 +18,7 @@ public class InfoUsuario {
 	private String username;
 	@Column(name = "PASSWORD")
 	private String password;
-	@Column(name = "CORREO_ELECTRONICO_PPAL")
-	private int correo_elect_ppal;
+
 	
 	
 	public InfoUsuario() {
@@ -27,12 +26,11 @@ public class InfoUsuario {
 	}
 
 
-	public InfoUsuario(int id, String username, String password, int correo_elect_ppal) {
+	public InfoUsuario(int id, String username, String password) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
-		this.correo_elect_ppal = correo_elect_ppal;
 	}
 
 
@@ -65,18 +63,5 @@ public class InfoUsuario {
 		this.password = password;
 	}
 
-
-	public int getCorreo_elect_ppal() {
-		return correo_elect_ppal;
-	}
-
-
-	public void setCorreo_elect_ppal(int correo_elect_ppal) {
-		this.correo_elect_ppal = correo_elect_ppal;
-	}
-	
-	
-	
-	
 
 }
