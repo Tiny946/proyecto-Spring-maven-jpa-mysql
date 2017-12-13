@@ -3,12 +3,13 @@ package com.altenapp.bo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.altenapp.bo.modelo.UsuarioWeb;
 import com.altenapp.datos.jpa.UsuarioJPAImpl;
 import com.altenapp.datos.jpa.Usuario_JPA_DAO;
 import com.altenapp.tablas.InfoUsuario;
-
+@Service
 public class GestionUsuarios implements GestionUsuariosBusinessObject{
 	
 	UsuarioJPAImpl usuarioJPAImpl;
@@ -20,10 +21,10 @@ public class GestionUsuarios implements GestionUsuariosBusinessObject{
 	String contrasenaObtenida;
 
 	
-	
+	@Override
 	public UsuarioWeb validarUsuario(UsuarioWeb usuario) {
 		
-		UsuarioWeb result = null;
+		UsuarioWeb result = new UsuarioWeb();
 		
 		usuarioObtenido = usuario.getUsuario();
 		contrasenaObtenida = usuario.getContrasena();
@@ -33,20 +34,22 @@ public class GestionUsuarios implements GestionUsuariosBusinessObject{
 		
 		listausers = usuario_JPA_DAO.findinfoUsuarioByUsername(usuarioObtenido);
 		
-		if(listausers.size() == 0) {
-			
+		switch(listausers.size()){
+		case 0:
 			result.setMensaje("nohayusers");
-			
-		}else if(listausers.size() == 1){
-			
+		break;
+		case 1:
+		if(usuario.getContrasena().equals(listausers.get(0).getPassword())){
 			result.setMensaje("pasaeluser");
-			
-		}else if(listausers.size() > 1){
-			
+		}else{
 			result.setMensaje("demasiadosregistros");
+		}
+		break;
 		}
 		
 		return result;
+		
+		
 	}
 
 }

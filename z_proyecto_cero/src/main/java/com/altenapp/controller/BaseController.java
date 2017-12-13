@@ -18,32 +18,77 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
+import com.altenapp.bo.GestionUsuariosBusinessObject;
+import com.altenapp.bo.modelo.UsuarioWeb;
 import com.altenapp.tablas.InfoUsuario;
-import com.sun.istack.internal.logging.Logger;
 
 @Controller
-public class BaseController extends AbstractController{
-	
-	BaseControllerLog baseControllerLog;
-	private static final String VIEW_INDEX = "index";
-	final static Logger logger1 = Logger.getLogger(BaseController.class);
+@RequestMapping("/home")
+public class BaseController{
+		
+	@Autowired
+	private GestionUsuariosBusinessObject usuarioBO;
+	private UsuarioWeb usuarioweb;
 
-	
+	@RequestMapping("/index")
+	protected String irIndex() throws Exception {
 
-	
-	
+		return ("index");
+	}
 
-	@Override
-	protected ModelAndView handleRequestInternal(HttpServletRequest arg0, HttpServletResponse arg1 ) throws Exception {
-		logger1.info("--LOGGGER INFO--  ventana Login");
+	@RequestMapping("/inicio")
+	protected String irInicio(@RequestParam("username")String username, @RequestParam("password") String password, ModelMap map) throws Exception {
+
+		String des = "";
+		
+		//con esto enviamos la info
+		usuarioweb = new UsuarioWeb();
+		usuarioweb.setUsuario(username);
+		usuarioweb.setContrasena(password);
 		
 		
 		
-		// TODO Auto-generated method stub
-		return new ModelAndView("index");
+		System.out.println("nom usuario: " + username);
+		System.out.println("contra: " + password);
+		
+		
+		usuarioweb = usuarioBO.validarUsuario(usuarioweb);
+		
+
+		
+		switch(usuarioweb.getMensaje()) {
+			case "pasaeluser":
+				map.addAttribute("nombre", username);
+				des = "inicio";
+				break;
+			case "nohayusers":
+				map.addAttribute("msgError", "El usuario no existe");
+				des = "index";
+				break;
+			
+			case "demasiadosregistros":
+				map.addAttribute("msgError", "el user o la password son incorrectas");
+				des = "index";
+				break;
+		}
+		
+		return des;
+		//return new ModelAndView("inicio");
 	}
 	
 	
+//	@RequestMapping("/service_desk")
+//	protected String irService(HttpServletRequest request) throws Exception {
+//	return ("service_desk");
+//	}
+//	@RequestMapping("/portal_web")
+//	protected String irPortal(HttpServletRequest request) throws Exception {
+//	return ("portal_web");
+//	}
+//	@RequestMapping("/profile")
+//	protected String irPerfil(HttpServletRequest request) throws Exception {
+//	return ("profile");
+//	}
 	
 	
 

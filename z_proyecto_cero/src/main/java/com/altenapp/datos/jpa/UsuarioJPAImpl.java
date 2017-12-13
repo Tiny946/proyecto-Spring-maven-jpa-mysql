@@ -13,22 +13,12 @@ import org.springframework.stereotype.Repository;
 import com.altenapp.tablas.InfoUsuario;
 
 //nombre que especificamos para luego llamarlo
-@Component("UsuarioJPAImpl")
-@Repository
+@Component
+@Transactional
 public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 	
 	@PersistenceContext
-	protected EntityManager entityManager;
-	
-	public EntityManager getEntityManager() {
-		return entityManager;
-	}
-	
-	@PersistenceContext
-	public void setEntityManager(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
-	
+	EntityManager entityManager;
 	
 	
 	@Override
@@ -49,41 +39,11 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		
 	}
 	
-	@Transactional
-	public List<InfoUsuario> findAllinfoUsuario(InfoUsuario usuarios) {
-		Query query = getEntityManager().createQuery("from InfoUsuario where id = :id");
-		query.setParameter("id", usuarios.getId());
-		List<InfoUsuario> resultList = query.getResultList();
-		return resultList;
-	}
 	
-	public List<InfoUsuario> findByUserName(InfoUsuario usuarios) {
-		Query query = getEntityManager().createQuery("from InfoUsuario where username = :id");
-		query.setParameter("id", usuarios.getId());
-		List<InfoUsuario> resultList = query.getResultList();
-		return resultList;
-	}
-	
-	/*
-	@Transactional
-	public InfoUsuario findinfoUsuarioByUsername(String username) {
-		Query query = getEntityManager().createQuery("from InfoUsuario where username = :username");
-		query.setParameter("username", username);
-		return null;
-	}
-	*/
-	
-	/*
-	@Transactional
-	public InfoUsuario findinfoUsuarioByUsername(String username) {
-		return getEntityManager().createQuery("from InfoUsuario where username = :username",InfoUsuario.class).getSingleResult();
-	}
-	*/
-	
-	@Transactional
+	@Override
 	public List <InfoUsuario> findinfoUsuarioByUsername(String username) {
 		 
-		Query query = getEntityManager().createQuery("from InfoUsuario where USERNAME = :username");
+		Query query = entityManager.createQuery("from InfoUsuario where USERNAME = :username");
 		query.setParameter("username", username);
 		return query.getResultList();
 	}
@@ -94,17 +54,6 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		return null;
 	}
 	
-	@Transactional
-    public InfoUsuario getUser(int user_id) {
-        return getEntityManager().find(InfoUsuario.class, user_id);
-    }
 	
-//	public List<infoUsuario> consulta(infoUsuario usuarios) {
-//		// TODO Auto-generated method stub
-//		Query q =entityManager.createQuery ("from LoginUsuarios u where u.username =: username");
-//		q.setParameter("username", usuarios.getUsername());
-//		return q.getResultList();
-//	}
-
 
 }
