@@ -19,12 +19,9 @@ public class InfoUsuario {
 	@Column(name = "PASSWORD")
 	private String password;
 
-	
-	
 	public InfoUsuario() {
 		
 	}
-
 
 	public InfoUsuario(int id, String username, String password) {
 		super();
@@ -33,35 +30,28 @@ public class InfoUsuario {
 		this.password = password;
 	}
 
-
 	public int getId() {
 		return id;
 	}
-
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
 	public String getUsername() {
 		return username;
 	}
-
 
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
-
 	public String getPassword() {
 		return password;
 	}
 
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 
 }

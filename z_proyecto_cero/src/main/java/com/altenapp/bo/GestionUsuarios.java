@@ -19,7 +19,6 @@ public class GestionUsuarios implements GestionUsuariosBusinessObject{
 	
 	String usuarioObtenido;
 	String contrasenaObtenida;
-
 	
 	@Override
 	public UsuarioWeb validarUsuario(UsuarioWeb usuario) {
@@ -48,8 +47,7 @@ public class GestionUsuarios implements GestionUsuariosBusinessObject{
 		}
 		
 		return result;
-		
-		
+
 	}
 
 }

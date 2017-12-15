@@ -45,7 +45,5 @@ public class UsuarioWeb {
 	public void setInfoUsuario(InfoUsuario infoUsuario) {
 		this.infoUsuario = infoUsuario;
 	}
-	
-	
 
 }

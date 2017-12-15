@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Inicio</title>
 
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/comun/img/favicon.ico">
 	
 
  	<!-- Bootstrap -->

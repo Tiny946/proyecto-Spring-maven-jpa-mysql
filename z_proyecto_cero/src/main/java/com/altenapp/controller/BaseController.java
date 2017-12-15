@@ -22,9 +22,14 @@ import com.altenapp.bo.GestionUsuariosBusinessObject;
 import com.altenapp.bo.modelo.UsuarioWeb;
 import com.altenapp.tablas.InfoUsuario;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 @RequestMapping("/home")
 public class BaseController{
+	
+
 		
 	@Autowired
 	private GestionUsuariosBusinessObject usuarioBO;
@@ -39,22 +44,19 @@ public class BaseController{
 	@RequestMapping("/inicio")
 	protected String irInicio(@RequestParam("username")String username, @RequestParam("password") String password, ModelMap map) throws Exception {
 
+
+		
 		String des = "";
 		
 		//con esto enviamos la info
 		usuarioweb = new UsuarioWeb();
 		usuarioweb.setUsuario(username);
 		usuarioweb.setContrasena(password);
-		
-		
-		
+	
 		System.out.println("nom usuario: " + username);
 		System.out.println("contra: " + password);
-		
-		
+				
 		usuarioweb = usuarioBO.validarUsuario(usuarioweb);
-		
-
 		
 		switch(usuarioweb.getMensaje()) {
 			case "pasaeluser":
@@ -73,7 +75,6 @@ public class BaseController{
 		}
 		
 		return des;
-		//return new ModelAndView("inicio");
 	}
 	
 	
@@ -89,8 +90,5 @@ public class BaseController{
 //	protected String irPerfil(HttpServletRequest request) throws Exception {
 //	return ("profile");
 //	}
-	
-	
-
 
 }

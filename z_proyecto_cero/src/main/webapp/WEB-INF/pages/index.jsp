@@ -9,6 +9,9 @@
 <head>
 
 <title>Login</title>
+
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/comun/img/favicon.ico">
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +38,7 @@
 				<a href="">¿Olvidaste tu contraseña?</a>
 				
 			</form>
-			<p id="mensajeerror">${msgError}</p>
+			<p style="color:red;" style="margin-left:500px;">${msgError}</p>
 			
 		</div>
 	</section>

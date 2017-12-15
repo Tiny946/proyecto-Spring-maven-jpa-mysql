@@ -19,8 +19,7 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 	
 	@PersistenceContext
 	EntityManager entityManager;
-	
-	
+		
 	@Override
 	public InfoUsuario findById(int id) {
 		// TODO Auto-generated method stub
@@ -38,11 +37,9 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
+		
 	@Override
-	public List <InfoUsuario> findinfoUsuarioByUsername(String username) {
-		 
+	public List <InfoUsuario> findinfoUsuarioByUsername(String username) {		 
 		Query query = entityManager.createQuery("from InfoUsuario where USERNAME = :username");
 		query.setParameter("username", username);
 		return query.getResultList();
@@ -54,6 +51,4 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		return null;
 	}
 	
-	
-
 }
