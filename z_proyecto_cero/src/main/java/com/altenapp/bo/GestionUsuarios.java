@@ -49,5 +49,4 @@ public class GestionUsuarios implements GestionUsuariosBusinessObject{
 		return result;
 
 	}
-
 }

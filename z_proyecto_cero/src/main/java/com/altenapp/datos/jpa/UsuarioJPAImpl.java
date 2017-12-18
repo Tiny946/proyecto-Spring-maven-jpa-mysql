@@ -50,5 +50,6 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	
 }

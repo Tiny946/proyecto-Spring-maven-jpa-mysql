@@ -37,6 +37,8 @@
 				
 				<a href="">¿Olvidaste tu contraseña?</a>
 				
+<!-- 				<p class="alta"><a href="alta" align="center">no tienes cuenta, create una!</a></p> -->
+				
 			</form>
 			<p style="color:red;" style="margin-left:500px;">${msgError}</p>
 			

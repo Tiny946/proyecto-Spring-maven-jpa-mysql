@@ -7,7 +7,7 @@ body{
     margin: 0;
 }
 
-.login{
+.alta{
 	position:fixed;
 	width:450px;
 	height:200px;
@@ -24,7 +24,7 @@ img{
 	
 }
 
-.username{
+.usernameAlta{
 	width: 280px;
 	height:27px;
 	border-radius: 3px;
@@ -32,7 +32,31 @@ img{
  	border-collapse: collapse;
 }
 
-.password{
+.passwordAlta{
+	width: 280px;
+	height:27px;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0) 0 0 0px;
+ 	border-collapse: collapse;
+}
+
+.nombreAlta{
+	width: 280px;
+	height:27px;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0) 0 0 0px;
+ 	border-collapse: collapse;
+}
+
+.apellidosAlta{
+	width: 280px;
+	height:27px;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0) 0 0 0px;
+ 	border-collapse: collapse;
+}
+
+.generoAlta{
 	width: 280px;
 	height:27px;
 	border-radius: 3px;
@@ -41,24 +65,9 @@ img{
 }
 
 .boton{
-	width: 125px;
+	width: 285px;
 	height:27px;
 	border-radius: 3px;
 	background-color: white;
 }
-p{
-	color: red;
-}
 
-a{
-	color: grey;
-	font-size: 12px;
-}
-
-a:hover{
-	color: red;
-}
-
-.alta{
-	text-align: center;
-}

@@ -1,6 +1,7 @@
 package com.altenapp.controller;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -37,6 +38,8 @@ public class BaseController{
 
 	@RequestMapping("/index")
 	protected String irIndex() throws Exception {
+		
+
 
 		return ("index");
 	}
@@ -75,6 +78,29 @@ public class BaseController{
 		}
 		
 		return des;
+	}
+	
+	@RequestMapping("/alta")
+	protected String irAlta() throws Exception {
+
+		return ("alta");
+	}
+	
+	@RequestMapping("/registrarse")
+	protected String registrarse(@RequestParam("nombre")String nombre,
+								@RequestParam("apellidos")String apellidos,
+								@RequestParam("fecha")Date fechanacimiento,
+								@RequestParam("genero")String genero,
+								@RequestParam("usernameAlta")String usernameAlta,
+								@RequestParam("passwordAlta")String passwordAlta) throws Exception {
+
+		System.out.println("nombre " + nombre);
+		System.out.println("apellidos " + apellidos);
+		System.out.println("fecha " + fechanacimiento);
+		System.out.println("genero " + genero);
+		System.out.println("usernameAlta " + usernameAlta);
+		System.out.println("passwordAlta " + passwordAlta);
+		return ("index");
 	}
 	
 	
