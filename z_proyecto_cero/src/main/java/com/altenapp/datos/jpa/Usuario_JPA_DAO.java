@@ -15,6 +15,10 @@ public interface Usuario_JPA_DAO {
 	
 	void borrarinfoUsuario(String s);
 	
+	InfoUsuario altaUsuarios(InfoUsuario infoUsuario);
+	
+	InfoUsuario borrarUsuarios(InfoUsuario infoUsuario);
+	
 	List<InfoUsuario> findAllinfoUsuario();
 	
 	List<InfoUsuario> findinfoUsuarioByUsername(String s);

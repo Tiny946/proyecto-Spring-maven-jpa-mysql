@@ -9,6 +9,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 
 import com.altenapp.tablas.InfoUsuario;
 
@@ -51,5 +52,24 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		return null;
 	}
 
+	@Override
+	public InfoUsuario altaUsuarios(InfoUsuario infoUsuario) {
+		entityManager.persist(infoUsuario);
+		
+		return infoUsuario;
+	}
+
+	public InfoUsuario borrarUsuarios(InfoUsuario infoUsuario) {
+		//recuperamos la lista de usuarios
+		List <InfoUsuario> infoUsuarios = findinfoUsuarioByUsername(infoUsuario.getUsername());
+		//hacemos un get de la posicion 0 de la lista de usuarios que es el id ya que en el find le tenemos que pasar el id
+		int id = infoUsuarios.get(0).getId();
+		//le pasamos el id ya que es obligatorio pasarle un integer al .find
+		InfoUsuario b = entityManager.find(InfoUsuario.class, id);
+		entityManager.remove(b);
+		
+	
+		return infoUsuario;
+	}
 	
 }

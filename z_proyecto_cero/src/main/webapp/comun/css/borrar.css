@@ -7,7 +7,7 @@ body{
     margin: 0;
 }
 
-.login{
+.borrar{
 	position:fixed;
 	width:450px;
 	height:200px;
@@ -24,7 +24,7 @@ img{
 	
 }
 
-.username{
+.usernameBorrar{
 	width: 280px;
 	height:27px;
 	border-radius: 3px;
@@ -32,7 +32,7 @@ img{
  	border-collapse: collapse;
 }
 
-.password{
+.passwordBorrar{
 	width: 280px;
 	height:27px;
 	border-radius: 3px;
@@ -41,41 +41,15 @@ img{
 }
 
 .boton{
-	width: 125px;
+	width: 285px;
 	height:27px;
 	border-radius: 3px;
 	background-color: white;
 }
 
-.msgerror{
-	margin-left: 75px;
+.textInformativo{
+	font-size: 11px;
+	margin-left: 40px;
 }
 
-.msgsucces{
-	margin-left: 35px;
-}
-
-.alta{
-	margin-left: 65px;
-}
-
-.borrarcuenta{
-	color: black;
-	margin-left: 1100px;
-	margin-top: 50px;
-	
-}
-
-p{
-	color: red;
-}
-
-a{
-	color: grey;
-	font-size: 12px;
-}
-
-a:hover{
-	color: red;
-}
 

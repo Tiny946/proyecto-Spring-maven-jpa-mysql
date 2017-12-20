@@ -49,4 +49,32 @@ public class GestionUsuarios implements GestionUsuariosBusinessObject{
 		return result;
 
 	}
+
+	@Override
+	public UsuarioWeb validarAlta(UsuarioWeb usuario) {
+		
+		InfoUsuario infousuario = new InfoUsuario();
+		
+		infousuario.setNombre(usuario.getNombre());
+		infousuario.setUsername(usuario.getUsuario());
+		infousuario.setPassword(usuario.getContrasena());
+		infousuario.setApellidos(usuario.getApellidos());
+		infousuario.setSexo(usuario.getGenero());
+		
+		InfoUsuario result = usuario_JPA_DAO.altaUsuarios(infousuario);
+		
+		return usuario;
+	}
+
+	@Override
+	public UsuarioWeb validarBorrado(UsuarioWeb usuario) {
+		InfoUsuario infousuario = new InfoUsuario();
+		
+		infousuario.setUsername(usuario.getUsuario());
+		infousuario.setPassword(usuario.getContrasena());
+		
+		InfoUsuario result = usuario_JPA_DAO.borrarUsuarios(infousuario);
+		
+		return usuario;
+	}
 }

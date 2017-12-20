@@ -10,6 +10,38 @@ public class UsuarioWeb {
 	
 	private String mensaje;
 	
+	private String nombre;
+	
+	private String apellidos;
+	
+	private String genero;
+	
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
 	public String getMensaje() {
 		return mensaje;
 	}

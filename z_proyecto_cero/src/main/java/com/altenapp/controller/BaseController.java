@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
+import com.altenapp.bo.GestionUsuarios;
 import com.altenapp.bo.GestionUsuariosBusinessObject;
 import com.altenapp.bo.modelo.UsuarioWeb;
 import com.altenapp.tablas.InfoUsuario;
@@ -86,20 +87,68 @@ public class BaseController{
 		return ("alta");
 	}
 	
+	@RequestMapping("/servicedesk")
+	protected String irServiceDesk() throws Exception {
+
+		return ("servicedesk");
+	}
+	
+	
+	
+	@RequestMapping("/borrarcuenta")
+	protected String irABorrarcuenta() throws Exception {
+
+		return ("borrarcuenta");
+	}
+	
 	@RequestMapping("/registrarse")
 	protected String registrarse(@RequestParam("nombre")String nombre,
 								@RequestParam("apellidos")String apellidos,
-								@RequestParam("fecha")Date fechanacimiento,
 								@RequestParam("genero")String genero,
 								@RequestParam("usernameAlta")String usernameAlta,
-								@RequestParam("passwordAlta")String passwordAlta) throws Exception {
+								@RequestParam("passwordAlta")String passwordAlta, ModelMap map2) throws Exception {
 
-		System.out.println("nombre " + nombre);
-		System.out.println("apellidos " + apellidos);
-		System.out.println("fecha " + fechanacimiento);
-		System.out.println("genero " + genero);
-		System.out.println("usernameAlta " + usernameAlta);
-		System.out.println("passwordAlta " + passwordAlta);
+		System.out.println("nombre --> " + nombre);
+		System.out.println("apellidos --> " + apellidos);
+		System.out.println("genero --> " + genero);
+		System.out.println("usernameAlta --> " + usernameAlta);
+		System.out.println("passwordAlta --> " + passwordAlta);
+		
+		//con esto enviamos la info
+		usuarioweb = new UsuarioWeb();
+		usuarioweb.setNombre(nombre);
+		usuarioweb.setApellidos(apellidos);
+		usuarioweb.setGenero(genero);
+		usuarioweb.setUsuario(usernameAlta);
+		usuarioweb.setContrasena(passwordAlta);
+		
+		usuarioweb = usuarioBO.validarAlta(usuarioweb);
+		
+		map2.addAttribute("msgSuccess", "Usuario Registrado correctamente");
+		
+
+		return ("index");
+	}
+	
+	@RequestMapping("/borrar")
+	protected String borrar(	@RequestParam("usernameBorrar")String usernameBorrar,
+								@RequestParam("passwordBorrar")String passwordBorrar, ModelMap map2) throws Exception {
+
+		
+		System.out.println("usernameBorrar --> " + usernameBorrar);
+		System.out.println("passwordBorrar --> " + passwordBorrar);
+		
+		//con esto enviamos la info
+		usuarioweb = new UsuarioWeb();
+		
+		usuarioweb.setUsuario(usernameBorrar);
+		usuarioweb.setContrasena(passwordBorrar);
+		
+		usuarioweb = usuarioBO.validarBorrado(usuarioweb);
+		
+		map2.addAttribute("msgSuccess", "Usuario Borrado correctamente");
+		
+
 		return ("index");
 	}
 	

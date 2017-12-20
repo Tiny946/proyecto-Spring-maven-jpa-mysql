@@ -1,9 +1,3 @@
-<!-- <html> -->
-<!-- <body> -->
-<%-- <h2>${mensaje}</h2> --%>
-<!-- </body> -->
-<!-- </html> -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,6 +17,7 @@
 
 </head>
 <body>
+<b><a href="borrarcuenta" class="borrarcuenta">Borrar cuenta de acceso</a></b>
 	<section class="container">
 		<div class="login">
 			<form action="inicio" method="post" modelAttribute="userForm">
@@ -37,10 +32,11 @@
 				
 				<a href="">¿Olvidaste tu contraseña?</a>
 				
-<!-- 				<p class="alta"><a href="alta" align="center">no tienes cuenta, create una!</a></p> -->
+				<i><p class="alta"><a href="alta" align="left">no tienes cuenta, create una!</a></p></i>
 				
 			</form>
-			<p style="color:red;" style="margin-left:500px;">${msgError}</p>
+			<b><p style="color:red;" class="msgerror">${msgError}</p></b>
+			<b><p style="color:green;" class="msgsucces">${msgSuccess}</p></b>
 			
 		</div>
 	</section>

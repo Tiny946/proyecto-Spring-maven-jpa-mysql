@@ -20,7 +20,7 @@
 				
 				<p><input class="nombreAlta" type="text" name="nombre" value="" placeholder="Nombre" required="required"  ></p>
 				<p><input class="apellidosAlta" type="text" name="apellidos" value="" placeholder="Apellidos" required="required"></p>				
- 				<p><input class="generoAlta" type="text" name="genero" value="" placeholder="Género" required="required"  ></p>
+ 				<p><input class="generoAlta" type="text" name="genero" value="" placeholder="Género" required="required"  maxlength="1"></p>
 				<p><input class="usernameAlta" type="text" name="usernameAlta" value="" placeholder="Username" required="required"  ></p>
 				<p><input class="passwordAlta" type="password" name="passwordAlta" value=""	placeholder="Password" required="required"></p>
 				

@@ -68,7 +68,7 @@
                   
                                      
                   </li>
-                  <li><a href="servicedesk.jsp"><i class="fa fa-desktop"></i> Service Desk</a>
+                  <li><a href="servicedesk"><i class="fa fa-desktop"></i> Service Desk</a>
                     
                   </li>
                   <li><a><i class="fa fa-table"></i> Portal Web </a>

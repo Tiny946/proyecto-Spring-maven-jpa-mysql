@@ -12,22 +12,22 @@
     <title>Service Desk </title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="bootstrap/css/nprogress.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="bootstrap/css/green.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="bootstrap/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- PNotify -->
-    <link href="bootstrap/css/pnotify.css" rel="stylesheet">
-    <link href="bootstrap/css/pnotify.buttons.css" rel="stylesheet">
-    <link href="bootstrap/css/pnotify.nonblock.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/pnotify.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/pnotify.buttons.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/pnotify.nonblock.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="bootstrap/css/custom.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/bootstrap/css/custom.min.css" rel="stylesheet">
   </head>
 	<body class="nav-md">
 	    <div class="container body">
@@ -43,7 +43,7 @@
 	            <!-- menu profile quick info -->
 	            <div class="profile">
 	              <div class="profile_pic">
-	                <img src="bootstrap/images/img.jpg" alt="..." class="img-circle profile_img">
+	                <img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="..." class="img-circle profile_img">
 	              </div>
 	              <div class="profile_info">
 	                <span>Bienvenido,</span>
@@ -59,7 +59,7 @@
 	            <div class="menu_section active">
 	                <h3>General</h3>
 	                <ul class="nav side-menu" style="">
-	                    <li><a href="inicio.jsp"><i class="fa fa-home"></i> Cuadro de Mando</a></li>
+	                    <li><a href="inicio"><i class="fa fa-home"></i> Cuadro de Mando</a></li>
 	                    <li class="current-page"><a href="/gentelella/app.php/minhap/service_desk"><i class="fa fa-desktop"></i> Service Desk</a></li>
 	                    <li><a href="/gentelella/app.php/minhap/portal_web"><i class="fa fa-table"></i> Portal Web</a></li>
 	                    <li><a href="/gentelella/app.php/minhap/documentacion"><i class="fa fa-file-text-o "></i> Documentación</a></li>
@@ -86,7 +86,7 @@
 	
 	        <!-- /menu footer buttons -->
 	        <div class="sidebar-footer hidden-small">
-	            <img src="bootstrap/images/alten3.png" width="100%"><br>
+	            <img src="${pageContext.request.contextPath}/bootstrap/images/alten3.png" width="100%"><br>
 	            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Opciones">
 	                <span class="fa fa-cog" aria-hidden="true"></span>
 	            </a>
@@ -111,7 +111,7 @@
 	              <div class="nav toggle">
 	                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
 	              </div>
-	              <a href="inicio.jsp" style="margin-top: 10px;" class="btn btn-success">Volver al Panel de Control</a>
+	              <a href="inicio" style="margin-top: 10px;" class="btn btn-success">Volver al Panel de Control</a>
 	
 	              <ul class="nav navbar-nav navbar-right">
 	                <li class="">
@@ -622,37 +622,37 @@
 	    
 	
 	    <!-- jQuery -->
-	    <script src="bootstrap/js/jquery.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.min.js"></script>
 	    <!-- Bootstrap -->
-	    <script src="bootstrap/js/bootstrap.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
 	    <!-- FastClick -->
-	    <script src="bootstrap/js/fastclick.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/fastclick.js"></script>
 	    <!-- NProgress -->
-	    <script src="bootstrap/js/nprogress.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/nprogress.js"></script>
 	
 	    <!-- Custom Theme Scripts -->
-	    <script src="bootstrap/js/custom.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/custom.min.js"></script>
 	      
 	      
 	
 	    <!-- jQuery -->
-	    <script src="bootstrap/js/jquery.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.min.js"></script>
 	    <!-- Bootstrap -->
-	    <script src="bootstrap/js/bootstrap.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
 	    <!-- FastClick -->
-	    <script src="bootstrap/js/fastclick.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/fastclick.js"></script>
 	    <!-- NProgress -->
-	    <script src="bootstrap/js/nprogress.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/nprogress.js"></script>
 	    <!-- Chart.js -->
-	    <script src="bootstrap/js/Chart.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/Chart.min.js"></script>
 	
 	    <!-- easy-pie-chart -->
-	    <script src="bootstrap/js/jquery.easypiechart.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/jquery.easypiechart.min.js"></script>
 	    <!-- bootstrap-progressbar -->
-	    <script src="bootstrap/js/bootstrap-progressbar.min.js"></script>
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap-progressbar.min.js"></script>
 	
 	    <!-- Custom Theme Scripts -->
-	    <script src="bootstrap/js/custom.min.js"></script>      
+	    <script src="${pageContext.request.contextPath}/bootstrap/js/custom.min.js"></script>      
 	      
 	         <script>
 	      $(function() {
