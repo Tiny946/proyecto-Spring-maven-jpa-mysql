@@ -22,6 +22,8 @@ import org.springframework.web.servlet.mvc.AbstractController;
 import com.altenapp.bo.GestionUsuarios;
 import com.altenapp.bo.GestionUsuariosBusinessObject;
 import com.altenapp.bo.modelo.UsuarioWeb;
+import com.altenapp.datos.jpa.UsuarioJPAImpl;
+import com.altenapp.datos.jpa.Usuario_JPA_DAO;
 import com.altenapp.tablas.InfoUsuario;
 
 import org.slf4j.Logger;
@@ -30,6 +32,7 @@ import org.slf4j.LoggerFactory;
 @Controller
 @RequestMapping("/home")
 public class BaseController{
+	
 	
 
 		
@@ -148,22 +151,10 @@ public class BaseController{
 		
 		map2.addAttribute("msgSuccess", "Usuario Borrado correctamente");
 		
+		
+		
 
 		return ("index");
 	}
-	
-	
-//	@RequestMapping("/service_desk")
-//	protected String irService(HttpServletRequest request) throws Exception {
-//	return ("service_desk");
-//	}
-//	@RequestMapping("/portal_web")
-//	protected String irPortal(HttpServletRequest request) throws Exception {
-//	return ("portal_web");
-//	}
-//	@RequestMapping("/profile")
-//	protected String irPerfil(HttpServletRequest request) throws Exception {
-//	return ("profile");
-//	}
 
 }

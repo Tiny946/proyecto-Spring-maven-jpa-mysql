@@ -12,20 +12,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/comun/css/loginEstilo.css">
 
+ <!-- Font Awesome -->
+    <link href="${pageContext.request.contextPath}/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
 <!-- la linea comentada de abajo es por si tienes problemas con las rutas relativas se arregla con eso: -->
 <%-- ${pageContext.request.contextPath}/ --%>
 
 </head>
 <body>
-<b><a href="borrarcuenta" class="borrarcuenta">Borrar cuenta de acceso</a></b>
+<b><a href="borrarcuenta" class="borrarcuenta"><i class="fa fa-trash-o" aria-hidden="true"></i>   Borrar cuenta de acceso</a></b>
 	<section class="container">
 		<div class="login">
 			<form action="inicio" method="post" modelAttribute="userForm">
 				
 				<IMG SRC="${pageContext.request.contextPath}/comun/img/alten.png">
 				
-				<p><input class="username" type="text" name="username" value="" placeholder="Username" required="required"  ></p>
-				<p><input class="password" type="password" name="password" value=""	placeholder="Password" required="required"></p>
+				<p><i id="icnuser" class="fa fa-user fa-lg"></i><input class="username" type="text" name="username" value="" placeholder="Username" required="required"  ></p>
+				<p><i id="icnuser" class="fa fa-unlock-alt fa-lg"></i><input class="password" type="password" name="password" value=""	placeholder="Password" required="required"></p>
 
 				<input class="boton" type="submit" name="accion" value="Login" />
 				

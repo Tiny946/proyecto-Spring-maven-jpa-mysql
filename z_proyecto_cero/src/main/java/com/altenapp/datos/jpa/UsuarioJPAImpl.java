@@ -68,7 +68,7 @@ public class UsuarioJPAImpl implements Usuario_JPA_DAO{
 		InfoUsuario b = entityManager.find(InfoUsuario.class, id);
 		entityManager.remove(b);
 		
-	
+		
 		return infoUsuario;
 	}
 	

@@ -27,7 +27,6 @@
 	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
 	<mvc:annotation-driven/>
 	
-	
 	<import resource="spring-config.xml"/>
 
 	
