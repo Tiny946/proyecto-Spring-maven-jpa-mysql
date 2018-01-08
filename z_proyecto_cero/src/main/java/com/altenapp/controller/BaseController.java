@@ -111,6 +111,8 @@ public class BaseController{
 								@RequestParam("usernameAlta")String usernameAlta,
 								@RequestParam("passwordAlta")String passwordAlta, ModelMap map2) throws Exception {
 
+		System.out.println("USUARIO REGISTRADO:");
+		System.out.println("-------------------");
 		System.out.println("nombre --> " + nombre);
 		System.out.println("apellidos --> " + apellidos);
 		System.out.println("genero --> " + genero);
