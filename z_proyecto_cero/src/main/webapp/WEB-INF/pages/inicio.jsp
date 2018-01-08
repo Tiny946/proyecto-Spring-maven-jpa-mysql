@@ -28,7 +28,28 @@
     <!-- Custom Theme Style -->
     <link href="${pageContext.request.contextPath}/bootstrap/css/custom.min.css" rel="stylesheet">
     
-    
+    <script language="JavaScript">
+		function fullScreen() {
+			var el = document.documentElement
+			    , rfs = // for newer Webkit and Firefox
+			           el.requestFullScreen
+			        || el.webkitRequestFullScreen
+			        || el.mozRequestFullScreen
+			        || el.msRequestFullScreen
+			;
+			if(typeof rfs!="undefined" && rfs){
+			  rfs.call(el);
+			} else if(typeof window.ActiveXObject!="undefined"){
+			  // for Internet Explorer
+			  var wscript = new ActiveXObject("WScript.Shell");
+			  if (wscript!=null) {
+			     wscript.SendKeys("{F11}");
+			  }
+			}
+			
+		}
+		// End -->
+	</script>
 
 
 </head>
@@ -71,19 +92,19 @@
                   <li><a href="servicedesk"><i class="fa fa-desktop"></i> Service Desk</a>
                     
                   </li>
-                  <li><a><i class="fa fa-table"></i> Portal Web </a>
+                  <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-table"></i> Portal Web </a>
                     
                   </li>
-                  <li><a><i class="fa fa-file-text-o"></i> Documentación </a>
+                  <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-file-text-o"></i> Documentación </a>
                     
                   </li>
-                  <li><a><i class="fa fa-ticket"></i>Gestión de servicio </a>
+                  <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-ticket"></i>Gestión de servicio </a>
                   
                   </li>
-                  <li><a><i class="fa fa-line-chart"></i>Monitorización </a>
+                  <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-line-chart"></i>Monitorización </a>
                   
                   </li>
-                  <li><a><i class="fa fa-search"></i>Buscador </a>
+                  <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-search"></i>Buscador </a>
                     
                   </li>
                 </ul>
@@ -103,8 +124,8 @@
                 <span class="fa fa-cog" aria-hidden="true"></span>
               </a>
               <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Pantalla Completa">
-                <span class="fa fa-arrows-alt" aria-hidden="true"></span>
-              </a>
+                <span class="fa fa-arrows-alt" aria-hidden="true" href="javascript:void(0);" onclick="fullScreen();"></span>
+              </a> 
               <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Bloquear">
                 <span class="fa fa-eye-slash" aria-hidden="true"></span>
               </a>

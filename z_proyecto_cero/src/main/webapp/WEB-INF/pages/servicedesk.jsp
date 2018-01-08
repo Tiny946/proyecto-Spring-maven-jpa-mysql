@@ -60,12 +60,12 @@
 	                <h3>General</h3>
 	                <ul class="nav side-menu" style="">
 	                    <li><a href="inicio"><i class="fa fa-home"></i> Cuadro de Mando</a></li>
-	                    <li class="current-page"><a href="/gentelella/app.php/minhap/service_desk"><i class="fa fa-desktop"></i> Service Desk</a></li>
-	                    <li><a href="/gentelella/app.php/minhap/portal_web"><i class="fa fa-table"></i> Portal Web</a></li>
-	                    <li><a href="/gentelella/app.php/minhap/documentacion"><i class="fa fa-file-text-o "></i> Documentación</a></li>
-	                    <li><a href="/gentelella/app.php/minhap/gestion_servicio"><i class="fa fa-ticket"></i> Gestión de Servicio</a></li>
-	                    <li><a href="/gentelella/app.php/minhap/monitorizacion"><i class="fa fa-line-chart"></i> Monitorización</a></li>
-	                    <li><a href="/gentelella/app.php/minhap"><i class="fa fa-search"></i> Buscador</a></li>
+	                    <li><a><i class="fa fa-desktop"></i> Service Desk</a></li>
+	                    <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-table"></i> Portal Web</a></li>
+	                    <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-file-text-o "></i> Documentación</a></li>
+	                    <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-ticket"></i> Gestión de Servicio</a></li>
+	                    <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-line-chart"></i> Monitorización</a></li>
+	                    <li><a href="javascript:alert('todavia no esta implementado!')"><i class="fa fa-search"></i> Buscador</a></li>
 	                </ul>                    
 	            </div>
 	            <!--div class="menu_section">
@@ -116,7 +116,7 @@
 	              <ul class="nav navbar-nav navbar-right">
 	                <li class="">
 	                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-	                    <img src="bootstrap/images/img.jpg" alt="">John Doe
+	                    <img src="${pageContext.request.contextPath}/bootstrap/images/img.jpg" alt="">John Doe
 	                    <span class=" fa fa-angle-down"></span>
 	                  </a>
 	                  <ul class="dropdown-menu dropdown-usermenu pull-right">

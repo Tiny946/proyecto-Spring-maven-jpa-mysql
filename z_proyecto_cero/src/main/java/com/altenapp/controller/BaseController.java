@@ -111,8 +111,8 @@ public class BaseController{
 								@RequestParam("usernameAlta")String usernameAlta,
 								@RequestParam("passwordAlta")String passwordAlta, ModelMap map2) throws Exception {
 
-		System.out.println("USUARIO REGISTRADO:");
-		System.out.println("-------------------");
+		System.out.println("USUARIO REGISTRADO: ");
+		System.out.println("--------------------");
 		System.out.println("nombre --> " + nombre);
 		System.out.println("apellidos --> " + apellidos);
 		System.out.println("genero --> " + genero);
@@ -140,6 +140,8 @@ public class BaseController{
 								@RequestParam("passwordBorrar")String passwordBorrar, ModelMap map2) throws Exception {
 
 		
+		System.out.println("USUARIO BORRADO: ");
+		System.out.println("-----------------");
 		System.out.println("usernameBorrar --> " + usernameBorrar);
 		System.out.println("passwordBorrar --> " + passwordBorrar);
 		
